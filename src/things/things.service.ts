@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { Thing } from './thing';
 
 @Injectable()
 export class ThingsService {
@@ -6,7 +7,7 @@ export class ThingsService {
     return 'Thing 1';
   }
 
-  getThing2(): string {
-    return 'Thing 2';
+  getThing2(): Thing {
+    return { name: 'Thing 2' };
   }
 }
